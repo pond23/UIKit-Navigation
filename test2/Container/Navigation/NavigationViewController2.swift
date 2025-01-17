@@ -21,7 +21,7 @@ class NavigationViewController2: UIViewController {
     
     // MARK: - Setup Views
     private func setupViews() {
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .systemPurple
         navigationItem.title = "NavigationViewController2"
         
         view.addSubview(popButton)

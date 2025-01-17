@@ -22,8 +22,8 @@ class TabBarViewController: UITabBarController {
     }
     
     private func createViewControllers() -> [UIViewController] {
-        let firstViewController = createTabViewController(title: "Search", backgroundColor: .systemGreen, tabBarItem: .search)
-        let secondViewController = createTabViewController(title: "More", backgroundColor: .systemBlue, tabBarItem: .more)
+        let firstViewController = createTabViewController(title: "Bookmarks", backgroundColor: .systemGreen, tabBarItem: .bookmarks)
+        let secondViewController = createTabViewController(title: "Top Rated", backgroundColor: .systemPurple, tabBarItem: .topRated)
         
         return [firstViewController, secondViewController]
     }

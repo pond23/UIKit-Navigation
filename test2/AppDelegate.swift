@@ -62,7 +62,7 @@ extension AppDelegate: UITableViewDataSource, UITableViewDelegate {
             selectedVC.title = "Navigation"
         case 2:
             selectedVC = TabBarViewController()
-            selectedVC.view.backgroundColor = .systemBlue
+            selectedVC.view.backgroundColor = .systemPurple
             selectedVC.title = "TabBar"
         case 3:
             selectedVC = PageViewController()

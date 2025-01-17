@@ -96,6 +96,6 @@ class PageViewController1: UIViewController {
 class PageViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .systemPurple
     }
 }

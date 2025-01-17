@@ -40,7 +40,7 @@ class ModalViewController2: UIViewController {
     // MARK: - Setup Methods
     
     private func setupViews() {
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .systemPurple
         navigationItem.title = "PresentViewController2"
         
         setupDismissButton()
