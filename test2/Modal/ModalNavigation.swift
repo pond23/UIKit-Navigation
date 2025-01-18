@@ -54,6 +54,17 @@ class ModalNavigation: UIViewController {
     
     private func configureButtonActions() {
         presentButton.addTarget(self, action: #selector(presentPressed), for: .primaryActionTriggered)
+        
+        // เป็นการเพิ่ม target ให้กับปุ่ม (presentButton) เพื่อให้สามารถตอบสนองต่อการกระทำ (action) ของผู้ใช้ เช่น การกดปุ่ม  โดยมีพารามิเตอร์ 3 ตัว ดังนี้
+        
+        // target: Any?
+        // เป็นตัวแปรที่ระบุว่า ใคร (หรือ อะไร) ที่จะรับการแจ้งเตือน (callback) เมื่อเกิดเหตุการณ์นี้
+        
+        // action: Selector
+        // เป็นการระบุ เมธอด ที่จะถูกเรียกใช้เมื่อเกิดเหตุการณ์ที่กำหนด
+        
+        // for: UIControl.Event
+        // ระบุ เหตุการณ์ ที่จะทำให้เมธอดใน action ถูกเรียก
     }
     
     // MARK: - Actions
@@ -61,7 +72,15 @@ class ModalNavigation: UIViewController {
     @objc private func presentPressed() {
         let viewController = ModalViewController1()
 //        viewController.modalTransitionStyle = .flipHorizontal
+        
+        // modalTransitionStyle
+        // กำหนด ประเภทของอนิเมชั่น ที่จะใช้เมื่อ view controller ใหม่ถูกแสดง (presented) หรือถูกปิด (dismissed).
+        
 //        viewController.modalPresentationStyle = .fullScreen
+        
+        // modalPresentationStyle
+        // กำหนด ลักษณะการแสดง (presentation style) ของ view controller เมื่อมันถูกนำเสนอ (presented).
+        
 //        viewController.receivedData = "Hello from ModalNavigation"
         present(viewController, animated: true, completion: nil)
     }
