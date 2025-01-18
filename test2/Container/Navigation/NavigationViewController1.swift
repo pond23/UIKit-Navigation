@@ -10,28 +10,34 @@ import UIKit
 class NavigationViewController1: UIViewController {
     
     // MARK: - Properties
+    
     private let pushButton = UIButton(type: .system)
     private let popButton = UIButton(type: .system)
 
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
-        configureButtons()
+        setup()
     }
     
     // MARK: - Setup Views
-    private func setupViews() {
+    
+    private func setup() {
         view.backgroundColor = .systemGreen
         navigationItem.title = "NavigationViewController1"
         
-        view.addSubview(pushButton)
-        view.addSubview(popButton)
-        
-        setupConstraints()
+        setupButtons()
+        setupButtonConstraints()
     }
     
-    private func setupConstraints() {
+    private func setupButtons() {
+        view.addSubview(pushButton)
+        view.addSubview(popButton)
+        configureButtonActions()
+    }
+    
+    private func setupButtonConstraints() {
         pushButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         pushButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
@@ -40,6 +46,7 @@ class NavigationViewController1: UIViewController {
     }
     
     // MARK: - Actions
+    
     @objc private func pushPressed() {
         let viewController = NavigationViewController2()
         navigationController?.pushViewController(viewController, animated: true)
@@ -50,7 +57,8 @@ class NavigationViewController1: UIViewController {
     }
     
     // MARK: - Helper Methods
-    private func configureButtons() {
+    
+    private func configureButtonActions() {
         configureButton(pushButton, title: "Push", action: #selector(pushPressed))
         configureButton(popButton, title: "Pop", action: #selector(popPressed))
     }

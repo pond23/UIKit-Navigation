@@ -18,17 +18,22 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+    
+    // MARK: - Setup Methods
+    
+    private func setup() {
         setupPages()
         setupPageViewController()
         setupPageControl()
     }
     
-    // MARK: - Setup Methods
-    
     private func setupPages() {
         let page1 = PageViewController1()
         let page2 = PageViewController2()
-        pages = [page1, page2]
+        let page3 = PageViewController3()
+        pages = [page1, page2, page3]
     }
     
     private func setupPageViewController() {
@@ -61,19 +66,31 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     // MARK: - UIPageViewControllerDataSource Methods
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.firstIndex(of: viewController),
+              viewControllerIndex > 0 else {
+            return nil
+        }
+        return pages[viewControllerIndex - 1]
         
-        let previousIndex = viewControllerIndex - 1
-        guard previousIndex >= 0 else { return pages.last }
-        return pages[previousIndex]
+//        guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
+//        
+//        let previousIndex = viewControllerIndex - 1
+//        guard previousIndex >= 0 else { return pages.last }
+//        return pages[previousIndex]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
+        guard let viewControllerIndex = pages.firstIndex(of: viewController),
+              viewControllerIndex < pages.count - 1 else {
+            return nil
+        }
+        return pages[viewControllerIndex + 1]
         
-        let nextIndex = viewControllerIndex + 1
-        guard nextIndex < pages.count else { return pages.first }
-        return pages[nextIndex]
+//        guard let viewControllerIndex = pages.firstIndex(of: viewController) else { return nil }
+//        
+//        let nextIndex = viewControllerIndex + 1
+//        guard nextIndex < pages.count else { return pages.first }
+//        return pages[nextIndex]
     }
     
     // MARK: - UIPageViewControllerDelegate Methods
@@ -86,6 +103,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource, 
     }
 }
 
+// MARK: - PageViewController1
+
 class PageViewController1: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,9 +112,20 @@ class PageViewController1: UIViewController {
     }
 }
 
+// MARK: - PageViewController2
+
 class PageViewController2: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemPurple
+    }
+}
+
+// MARK: - PageViewController3
+
+class PageViewController3: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemRed
     }
 }

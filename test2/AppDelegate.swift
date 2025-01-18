@@ -54,20 +54,12 @@ extension AppDelegate: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.row {
         case 0:
             selectedVC = ModalNavigation()
-            selectedVC.view.backgroundColor = .systemRed
-            selectedVC.title = "Modal"
         case 1:
             selectedVC = NavigationViewController1()
-            selectedVC.view.backgroundColor = .systemGreen
-            selectedVC.title = "Navigation"
         case 2:
             selectedVC = TabBarViewController()
-            selectedVC.view.backgroundColor = .systemPurple
-            selectedVC.title = "TabBar"
         case 3:
             selectedVC = PageViewController()
-            selectedVC.view.backgroundColor = .systemYellow
-            selectedVC.title = "Page"
         default:
             return
         }

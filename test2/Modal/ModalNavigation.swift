@@ -28,14 +28,15 @@ class ModalNavigation: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
-        setupButton()
+        setup()
     }
     
     // MARK: - Setup Methods
     
-    private func setupNavigationBar() {
+    private func setup() {
+        view.backgroundColor = .systemRed
         navigationItem.title = "Modal"
+        setupButton()
     }
     
     private func setupButton() {
@@ -59,7 +60,8 @@ class ModalNavigation: UIViewController {
     
     @objc private func presentPressed() {
         let viewController = ModalViewController1()
-        viewController.receivedData = "Hello from ModalNavigation"
+//        viewController.modalTransitionStyle = .flipHorizontal
+//        viewController.receivedData = "Hello from ModalNavigation"
         present(viewController, animated: true, completion: nil)
     }
 }

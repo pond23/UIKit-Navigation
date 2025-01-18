@@ -10,13 +10,15 @@ import UIKit
 class TabBarViewController: UITabBarController {
     
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupTabBar()
+        setup()
     }
     
     // MARK: - Setup Methods
-    private func setupTabBar() {
+    
+    private func setup() {
         navigationItem.title = "TabBar Container"
         viewControllers = createViewControllers()
     }

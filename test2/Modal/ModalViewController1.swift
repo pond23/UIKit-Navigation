@@ -11,7 +11,7 @@ class ModalViewController1: UIViewController {
     
     // MARK: - Properties
     
-    var receivedData: String?
+//    var receivedData: String?
     
     // MARK: - UI Elements
     
@@ -43,18 +43,17 @@ class ModalViewController1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let data = receivedData {
-            print("Received data: \(data)")
-        }
-        setupViews()
+//        if let data = receivedData {
+//            print("Received data: \(data)")
+//        }
+        setup()
     }
     
     // MARK: - Setup Methods
     
-    private func setupViews() {
+    private func setup() {
         view.backgroundColor = .systemGreen
         navigationItem.title = "PresentViewController1"
-        
         setupButtons()
         setupButtonConstraints()
     }

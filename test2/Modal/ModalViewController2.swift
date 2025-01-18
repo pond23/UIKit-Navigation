@@ -34,29 +34,33 @@ class ModalViewController2: UIViewController {
         if let data = receivedData {
             print("Received data: \(data)")
         }
-        setupViews()
+        setup()
     }
     
     // MARK: - Setup Methods
     
-    private func setupViews() {
+    private func setup() {
         view.backgroundColor = .systemPurple
         navigationItem.title = "PresentViewController2"
         
-        setupDismissButton()
-        setupDismissButtonConstraints()
+        setupButton()
+        setupButtonConstraints()
     }
     
-    private func setupDismissButton() {
+    private func setupButton() {
         view.addSubview(dismissButton)
-        dismissButton.addTarget(self, action: #selector(dismissPressed), for: .primaryActionTriggered)
+        configureButtonActions()
     }
     
-    private func setupDismissButtonConstraints() {
+    private func setupButtonConstraints() {
         NSLayoutConstraint.activate([
             dismissButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             dismissButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+    }
+    
+    private func configureButtonActions() {
+        dismissButton.addTarget(self, action: #selector(dismissPressed), for: .primaryActionTriggered)
     }
     
     // MARK: - Actions
