@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7085FA2D3C12E900016D35 /* ModalExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7085F92D3C12E900016D35 /* ModalExercise.swift */; };
+		FA7085FC2D3C130300016D35 /* NavigationExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7085FB2D3C130300016D35 /* NavigationExercise.swift */; };
 		FA9EADCD2D3AA0C5008031C7 /* ModalNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9EADCC2D3AA0C5008031C7 /* ModalNavigation.swift */; };
 		FA9EADCF2D3AA12C008031C7 /* ModalViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9EADCE2D3AA12C008031C7 /* ModalViewController1.swift */; };
 		FA9EADD12D3AA185008031C7 /* ModalViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9EADD02D3AA185008031C7 /* ModalViewController2.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA7085F92D3C12E900016D35 /* ModalExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalExercise.swift; sourceTree = "<group>"; };
+		FA7085FB2D3C130300016D35 /* NavigationExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExercise.swift; sourceTree = "<group>"; };
 		FA9EADCC2D3AA0C5008031C7 /* ModalNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalNavigation.swift; sourceTree = "<group>"; };
 		FA9EADCE2D3AA12C008031C7 /* ModalViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController1.swift; sourceTree = "<group>"; };
 		FA9EADD02D3AA185008031C7 /* ModalViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController2.swift; sourceTree = "<group>"; };
@@ -88,6 +92,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA7085F72D3C10B100016D35 /* Exercise1 */ = {
+			isa = PBXGroup;
+			children = (
+				FA7085F92D3C12E900016D35 /* ModalExercise.swift */,
+			);
+			path = Exercise1;
+			sourceTree = "<group>";
+		};
+		FA7085F82D3C115800016D35 /* Exercise2 */ = {
+			isa = PBXGroup;
+			children = (
+				FA7085FB2D3C130300016D35 /* NavigationExercise.swift */,
+			);
+			path = Exercise2;
+			sourceTree = "<group>";
+		};
 		FA9EADC92D3AA09A008031C7 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +176,8 @@
 		FAE957452C1AF72F0035FA37 /* test2 */ = {
 			isa = PBXGroup;
 			children = (
+				FA7085F82D3C115800016D35 /* Exercise2 */,
+				FA7085F72D3C10B100016D35 /* Exercise1 */,
 				FA9EADC92D3AA09A008031C7 /* Modal */,
 				FA9EADCB2D3AA0AC008031C7 /* Container */,
 				FAE957462C1AF72F0035FA37 /* AppDelegate.swift */,
@@ -322,9 +344,11 @@
 				FA9EADD82D3AA218008031C7 /* NavigationViewController2.swift in Sources */,
 				FA9EADDA2D3AA2B2008031C7 /* TabBarViewController.swift in Sources */,
 				FAE9574B2C1AF72F0035FA37 /* ViewController.swift in Sources */,
+				FA7085FA2D3C12E900016D35 /* ModalExercise.swift in Sources */,
 				FA9EADCD2D3AA0C5008031C7 /* ModalNavigation.swift in Sources */,
 				FAE957472C1AF72F0035FA37 /* AppDelegate.swift in Sources */,
 				FAE957492C1AF72F0035FA37 /* SceneDelegate.swift in Sources */,
+				FA7085FC2D3C130300016D35 /* NavigationExercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,11 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let options = ["Modal", "Navigation", "TabBar", "Page"]
+        let options = ["Modal", "Navigation", "TabBar", "Page", "Exercise 1", "Exercise 2"]
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         
         cell.textLabel?.text = options[indexPath.row]
@@ -60,6 +60,10 @@ extension AppDelegate: UITableViewDataSource, UITableViewDelegate {
             selectedVC = TabBarViewController()
         case 3:
             selectedVC = PageViewController()
+        case 4:
+            selectedVC = ModalExercise()
+        case 5:
+            selectedVC = NavigationExercise()
         default:
             return
         }

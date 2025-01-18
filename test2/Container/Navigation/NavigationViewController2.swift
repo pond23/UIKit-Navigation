@@ -12,12 +12,19 @@ class NavigationViewController2: UIViewController {
     // MARK: - Properties
     
     private let popButton = UIButton(type: .system)
-
+    
+    var name: String?
+    var id: Int?
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        
+        if let name, let id {
+            print("Name: \(name) ID: \(id)")
+        }
     }
     
     // MARK: - Setup Views

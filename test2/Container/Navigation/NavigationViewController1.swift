@@ -50,6 +50,8 @@ class NavigationViewController1: UIViewController {
     
     @objc private func pushPressed() {
         let viewController = NavigationViewController2()
+        viewController.name = "Amonrit"
+        viewController.id = 200
         navigationController?.pushViewController(viewController, animated: true)
     }
     

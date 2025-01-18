@@ -26,8 +26,9 @@ class TabBarViewController: UITabBarController {
     private func createViewControllers() -> [UIViewController] {
         let firstViewController = createTabViewController(title: "Bookmarks", backgroundColor: .systemGreen, tabBarItem: .bookmarks)
         let secondViewController = createTabViewController(title: "Top Rated", backgroundColor: .systemPurple, tabBarItem: .topRated)
-        
-        return [firstViewController, secondViewController]
+        let thirdViewController = createTabViewController(title: "History", backgroundColor: .systemRed, tabBarItem: .history)
+
+        return [firstViewController, secondViewController, thirdViewController]
     }
     
     private func createTabViewController(title: String, backgroundColor: UIColor, tabBarItem: UITabBarItem.SystemItem) -> UIViewController {
