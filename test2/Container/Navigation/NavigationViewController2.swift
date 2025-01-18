@@ -31,7 +31,7 @@ class NavigationViewController2: UIViewController {
     
     private func setupButtons() {
         view.addSubview(popButton)
-        configureButtonActions()
+        configureButton(popButton, title: "Pop", action: #selector(popPressed))
     }
     
     private func setupButtonConstraints() {
@@ -45,10 +45,6 @@ class NavigationViewController2: UIViewController {
     }
     
     // MARK: - Helper Methods
-    
-    private func configureButtonActions() {
-        configureButton(popButton, title: "Pop", action: #selector(popPressed))
-    }
     
     private func configureButton(_ button: UIButton, title: String, action: Selector) {
         var configuration = UIButton.Configuration.filled()

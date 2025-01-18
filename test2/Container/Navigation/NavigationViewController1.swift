@@ -34,7 +34,8 @@ class NavigationViewController1: UIViewController {
     private func setupButtons() {
         view.addSubview(pushButton)
         view.addSubview(popButton)
-        configureButtonActions()
+        configureButton(pushButton, title: "Push", action: #selector(pushPressed))
+        configureButton(popButton, title: "Pop", action: #selector(popPressed))
     }
     
     private func setupButtonConstraints() {
@@ -57,11 +58,6 @@ class NavigationViewController1: UIViewController {
     }
     
     // MARK: - Helper Methods
-    
-    private func configureButtonActions() {
-        configureButton(pushButton, title: "Push", action: #selector(pushPressed))
-        configureButton(popButton, title: "Pop", action: #selector(popPressed))
-    }
     
     private func configureButton(_ button: UIButton, title: String, action: Selector) {
         var configuration = UIButton.Configuration.filled()

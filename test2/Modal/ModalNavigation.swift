@@ -61,6 +61,7 @@ class ModalNavigation: UIViewController {
     @objc private func presentPressed() {
         let viewController = ModalViewController1()
 //        viewController.modalTransitionStyle = .flipHorizontal
+//        viewController.modalPresentationStyle = .fullScreen
 //        viewController.receivedData = "Hello from ModalNavigation"
         present(viewController, animated: true, completion: nil)
     }
